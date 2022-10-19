@@ -54,12 +54,12 @@ export class FormInputs {
         const address = this.address.value;
         const country = this.country.value;
         const town = this.town.value;
-        const zip = this.zip.valueAsNumber;
+        const zip = this.zip.value;
         const product = this.product.value;
         const price = this.price.valueAsNumber;
         const quantity = this.quantity.valueAsNumber;
         const tva = this.tva.valueAsNumber;
-        if (zip > 0 && price > 0 && quantity > 0 && tva > 0) {
+        if (price > 0 && quantity > 0 && tva > 0) {
             return [type, firstName, lastName, address, country, town, zip, product, price, quantity, tva];
         }
         else {

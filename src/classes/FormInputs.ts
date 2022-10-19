@@ -77,20 +77,20 @@ export class FormInputs {
     }
 
     // Check if every input datas are correct
-    private inputDatas(): [string, string, string, string, string, string, number, string, number, number, number] | void {
+    private inputDatas(): [string, string, string, string, string, string, string, string, number, number, number] | void {
         const type = this.type.value;
         const firstName = this.firstName.value;
         const lastName = this.lastName.value;
         const address = this.address.value;
         const country = this.country.value;
         const town = this.town.value;
-        const zip = this.zip.valueAsNumber;
+        const zip = this.zip.value;
         const product = this.product.value;
         const price = this.price.valueAsNumber;
         const quantity = this.quantity.valueAsNumber;
         const tva = this.tva.valueAsNumber;
 
-        if ( zip > 0 && price > 0 && quantity > 0 && tva > 0 ) {
+        if ( price > 0 && quantity > 0 && tva > 0 ) {
             return [type, firstName, lastName, address, country, town, zip, product, price, quantity, tva];
         } else {
             alert("The digit values must be superior to 0.")
